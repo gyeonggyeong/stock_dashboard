@@ -3,7 +3,7 @@
 import streamlit as st
 
 def main():
-    st.title("Hellow World")
+    st.title("this is a dashboard")
 
 if __name__ == '__main__':
     main()
