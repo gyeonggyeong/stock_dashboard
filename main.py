@@ -6,14 +6,14 @@ from data_loader import load_data
 import pandas as pd
 
 def main():
-    st.title("this is a dashboard")
+    st.title("대시보드")
     df = load_data()
     st.write(df)
 
     st.subheader("Select Date Range")
     df['Date'] = pd.to_datetime(df['Date'])
-    start_date = st.date_input('Start Date', df['Date'].min())
-    end_date = st.date_input('End Date', df['Date'].max())
+    start_date = st.date_input('시작일', df['Date'].min())
+    end_date = st.date_input('종료일', df['Date'].max())
 
     ranged_df = df[(df['Date'] >= pd.to_datetime(start_date))
     & (df['Date'] <= pd.to_datetime(end_date))]
